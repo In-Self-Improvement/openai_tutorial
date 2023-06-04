@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica&display=swap");
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -20,4 +22,38 @@
 .result-image {
   margin-top: 20px;
   width: 350px;
+}
+
+/* OptionSelection */
+.heading {
+  font-family: Geologica;
+}
+
+.grid-main {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.grid-child {
+  border: 2px solid whitesmoke;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.grid-child:hover {
+  background-color: whitesmoke;
+  color: #212121;
+}
+
+.grid-child h3 {
+  font-family: Geologica;
+  font-weight: 700;
+}
+
+.grid-child p {
+  font-family: Geologica;
+  font-weight: 500;
+  font-size: 15px;
 }
