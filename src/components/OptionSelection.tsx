@@ -1,9 +1,7 @@
-import React from "react";
 import { arrayItems } from "../AIOptions";
-
+import { options } from "../models/options";
 export default function OptionSelection() {
-  console.log("arrayItems", arrayItems);
-  const selectOption = option => {
+  const selectOption = (option: options) => {
     console.log("option", option);
   };
   return (
@@ -15,7 +13,7 @@ export default function OptionSelection() {
             <div
               className="grid-child"
               onClick={() => {
-                selectOption(item?.option);
+                selectOption(item?.option as options);
               }}
             >
               <h3>{item.name}</h3>
