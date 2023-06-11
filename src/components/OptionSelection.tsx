@@ -1,9 +1,11 @@
 import { arrayItems } from "../AIOptions";
 import { options } from "../models/options";
-export default function OptionSelection() {
-  const selectOption = (option: options) => {
-    console.log("option", option);
-  };
+
+interface Props {
+  selectOption: (option: options) => void;
+}
+export default function OptionSelection(props: Props) {
+  const selectOption = props.selectOption;
   return (
     <>
       <h1>React AI APP</h1>
