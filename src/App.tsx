@@ -18,10 +18,7 @@ function App() {
   };
   const doStuff = async () => {
     const object: options = { ...option, prompt: input };
-    console.log("object", object);
-
     const response = await openai.createCompletion(object);
-    console.log("response", response);
 
     setResult(response?.data?.choices[0]?.text ?? "");
   };
