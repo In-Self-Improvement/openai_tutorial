@@ -5,9 +5,9 @@ import Translation from "./components/Translation";
 import { options } from "./models/options";
 import { Configuration, OpenAIApi } from "openai";
 function App() {
-  const [option, setOption] = useState({});
-  const [input, setInput] = useState("");
-  const [result, setResult] = useState("");
+  const [option, setOption] = useState<options>({});
+  const [input, setInput] = useState<string>("");
+  const [result, setResult] = useState<string>("");
 
   const configuration = new Configuration({
     apiKey: import.meta.env.VITE_OPENAI_API_KEY as string,
@@ -16,13 +16,13 @@ function App() {
   const selectOption = (option: options) => {
     setOption(option);
   };
-  console.log("option", input);
   const doStuff = async () => {
-    const object = { ...option, prompt: input };
+    const object: options = { ...option, prompt: input };
     console.log("object", object);
 
     const response = await openai.createCompletion(object);
-    console.log("rrr", response);
+    console.log("response", response);
+
     setResult(response?.data?.choices[0]?.text ?? "");
   };
   return (
