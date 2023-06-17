@@ -6,4 +6,5 @@ export interface options {
   frequency_penalty: number;
   presence_penalty: number;
   stop: string[];
+  prompt?: string;
 }
